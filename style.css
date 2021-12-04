@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-serif;
+}
+
+#app {
+    background-color: #141414;
+    color: white;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+/*style for main area*/
+main {
+    padding: 4%;
+}
+#logo {
+    color: white;
+    text-decoration: none;
+}
+
+#logo h1 {
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    padding-left: 20px;
+}
+
+#logo h1::before {
+content: "";
+background-color: #383837;
+width: 20px;
+height: 20px;
+position: absolute;
+border-radius: 50%;
+left: -2px;
+top: 4px;
+}
+
+form {
+    width: 100%;
+    height: 50px;
+    max-height: 100%;
+    background-color: #1f2022;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    margin: 25px 0px;
+    color: #555;
+}
+
+form input {
+    flex: 1;
+    align-self: stretch;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: #555;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #303133;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: #555;
+}
+main .filters {
+    margin: 5px 0;
+}
+
+main .filters button {
+    cursor: pointer;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50px;
+    margin: 4px;
+    background-color: #303133;
+    color: #555;
+    transition: 0.5s;
+
+}
+main .filters button.active {
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+}
+
+main .filters button:hover {
+    background-color: #888;
+    color: #000;
+}
+main #photogrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    padding: 20px 0px;
+}
+
+main #photogrid .photo{
+    background-color:#303133;
+    height: 250px;
+    border-radius: 14px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto auto;
+
+}
+
+main #photogrid .photo .image {
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+    cursor: pointer;
+    height: 160px;
+}
+
+
+main #photogrid .photo .image img {
+    position: relative;
+    top:-30%;
+    width: 100%;
+    transition: 0.8s;
+}
+
+main #photogrid .photo:hover img {
+    transform: scale(1.2);
+}
+
+main #photogrid .photo .image button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #4e4e4e;
+    color: #fff;
+}
+main #photogrid .photo .details {
+position: relative;
+padding: 15px;
+}
+main #photogrid .photo .details p {
+    font-size: 14px;
+    padding: 2px 0px;
+}
+
+main #photogrid .photo .details p.size {
+    font-size: 12px;
+    color: #888;
+}
+
+
+main #photogrid .photo .details button {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+    border: none;
+}
+
+aside {
+    background-color:#282827;
+    transition: 1s;
+    /*width: 320px*/
+}
